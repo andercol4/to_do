@@ -1,0 +1,17 @@
+<h1>List</h1>
+  <ul>
+<% @items.each do |item| %>
+    <li>
+      <%= item.task %><br />
+      created by <%= item.creator %><br />
+      <% if item.complete %>
+          COMPLETED
+        <% else %>
+          NOT COMPLETED
+        <% end %>
+        <%= link_to 'Edit task', edit_item_path(item) %>
+        <hr />
+    </li>
+    <%end%>
+  </ul>
+  <%= link_to 'Add task', new_item_path %>
