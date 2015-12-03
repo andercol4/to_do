@@ -2,10 +2,13 @@
 <%= form_for @item do |f|%>
   <%= f.label :creator %> :
   <%= f.text_field :creator %>
-
+  <br />
   <%= f.label :task %> :
   <%= f.text_field :task %>
-
+  <br />
+  <%= f.label :complete %>
+  <%= f.check_box :complete%>
+  <br />
   <%= f.submit %>
 <% end %>
 <%= link_to 'List', items_path %>

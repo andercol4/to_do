@@ -38,6 +38,6 @@ class ItemsController < ApplicationController
     private
 
     def item_params
-      params.require(:item).permit(:creator, :task)
+      params.require(:item).permit(:creator, :task, :complete)
     end
 end
